@@ -15,6 +15,13 @@ def fetchReviews(id):
         print("---> " + review["author"]["personaname"] + ", with {} hours, says: ".format(hours_at_post))
         print(review["review"])
         print("--------------------------------------------------------------------------------------------------------------------------------------------------------------")
+    def returnReviewText(id):
+        reviews = data["reviews"]
+        reviewTexts = []
+        for review in reviews:
+            reviewTexts.append(review["review"])
+        for text in reviewTexts:
+            print(text)
 fetchReviews(1778820)
 ##  for dict in data:   ##tries to scan thru for each dictionary in data, but each data key is of a different type
 ##      print(dict)
